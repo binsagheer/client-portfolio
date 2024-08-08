@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Gallery - Final Level</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Visual Showcase</h1>
+      <p>Capturing Moments, One Image at a Time</p>
+      <div class="contact-info">
+        <p>
+          📞 <a href="tel:+1234567890">+1 234 567 890</a> | ✉️
+          <a href="mailto:your-email@example.com">your-emailadress.com</a> | 💬
+          <a href="https://wa.me/1234567890">WhatsApp</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <!-- img size  ====  height: 600 px width: 600 px -->
+
+      <div class="img-div">
+        <img src="sublevel1_img/1.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/4.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/6.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/1.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/7.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/8.jpg" alt="Final Image 3" />
+    </div>
+      <div class="img-div">
+        <img src="sublevel1_img/4.jpg" alt="Final Image 3" />
+    </div>
+    </div>
+    <button
+      style="display: block; margin: auto; margin-block: 30px"
+      class="button_back"
+    >
+      <span><a href="level1.html">Back to</a></span>
+    </button>
+    <script>
+      // Function to check if an element is in the viewport
+      function isInViewport(element) {
+        const bounding = element.getBoundingClientRect();
+        return (
+          bounding.top >= 0 &&
+          bounding.left >= 0 &&
+          bounding.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          bounding.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Function to reveal elements in the viewport
+      function revealImages() {
+        const images = document.querySelectorAll(".gallery img");
+        images.forEach((img) => {
+          if (isInViewport(img)) {
+            img.style.opacity = "1";
+            img.style.transform = "translateY(0)";
+          }
+        });
+      }
+
+      // Event listener for scroll
+      window.addEventListener("scroll", revealImages);
+
+      // Call the function initially in case images are already in view
+      document.addEventListener("DOMContentLoaded", revealImages);
+    </script>
+  </body>
+</html>

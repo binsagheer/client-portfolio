@@ -1,0 +1,320 @@
+body::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+  }
+  
+  /* Style the scrollbar track (background) */
+  body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Optional: background of the track */
+    border-radius: 6px; /* Optional: rounded corners */
+  }
+  
+  /* Style the draggable part (thumb) */
+  body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right top, #37deda, #1abfcf, #20a0bd, #3082a4, #396587, #3b6285, #3e5e82, #405b7f, #43709a, #4185b4, #389ccf, #25b3e8);
+    border-radius: 6px; /* Optional: rounded corners */
+  }
+  
+  /* Style the scrollbar thumb on hover */
+  body::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to right top, #37deda, #1abfcf, #20a0bd, #3082a4, #396587, #3b6285, #3e5e82, #405b7f, #43709a, #4185b4, #389ccf, #25b3e8);
+  }
+
+body{width: 100%;background-image: linear-gradient(to right top, #82f8f5, #90f2ff, #a4ecff, #b8e6fe, #c8e0f6, #c8ddf3, #c7d9ef, #c7d6ec, #b9d4ef, #a8d2f0, #95d1f0, #7fd0ee); font-family: 'Roboto', sans-serif;  
+
+    margin: 0;  
+    padding: 0;}
+.hero {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    
+    min-height:145px;  
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;  
+    backdrop-filter: blur(10px); /* This creates the blur effect */  
+   background-color: rgba(255, 255, 255, 0.2); 
+     
+    text-align: center;  
+    padding: 20px;  
+}  
+
+.hero h1 {  
+    font-size: 3rem;  
+    margin: 0;  
+    color: #f4511e; /* Yellow */  
+}  
+
+.hero p {  
+    font-size: 1.2rem;  
+    margin: 10px 0;  
+    color: #ffffff; /* White */  
+}  
+
+.contact-info {  
+    margin-top: 20px;  
+}  
+
+.contact-info a {  
+    color: #f4511e; /* Yellow */  
+    text-decoration: none;  
+    margin: 0 10px;  
+}  
+
+.contact-info a:hover {  
+    text-decoration: underline;  
+}  
+img{box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out!important;
+ 
+}
+
+/* Scale up on hover */
+img:hover {
+  transform: scale(1.1) !important; /* Scale up by 5% */
+}
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width:200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button span  a{color: white;text-decoration: none;}
+  .img-div{padding: 26px;}
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  /*  */
+  .button_back{
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 16px;
+    width:220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button_back span  a{color: white;text-decoration: none;}
+  .img-div{padding: 26px;}
+  .button_back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   
+  }
+  
+  .button_back span:before {
+    content: '\00bb'; /* Unicode for the icon */
+    position: absolute;
+    opacity: 1; /* Ensure icon is visible */
+    top: 0%; /* Center vertically */
+    left: -23px; /* Position icon on the left side */
+    transform: translateY(-50%); /* Center icon vertically */
+    transform: rotate(180deg);
+    transition: 0.5s;
+  
+  }
+  
+  .button_back:hover span {
+    padding-right: 20px;
+  }
+  
+  .button_back:hover span:before {
+    opacity: 1;
+    left: -26px; 
+    z-index: 9999;
+ 
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;  border: 2px solid #ddd;
+    border-radius: 8px; 
+    transform: translateY(20px);
+    animation: slideUp 1s forwards; /* Apply animation */
+     /* Ensure images cover the grid cell without stretching */
+  }
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .gallery-home img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;  border: 2px solid #ddd;
+    border-radius: 8px; 
+    transform: translateY(20px);
+    animation: slideUp 1s forwards; /* Apply animation */
+   
+  }
+
+  .img-div{transition: transform 0.3s ease;}
+  .img-div :hover{transform: scale(1.05);}
+
+
+  /* img-div */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .back-link {
+              display: block;
+              text-align: center;
+              margin: 20px;
+              text-decoration: none;
+              color: #000;
+          }
+
+
+
+  /*  */
+
+
+/*  */
+
+.gallery-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  /* Media query for screens between 576px and 768px */
+  @media (max-width: 768px) {
+    .gallery-home {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 12px;
+      padding: 12px;
+    }
+    .img-div{padding: 30px  !important;}
+  }
+  
+  /* Media query for screens below 576px */
+  @media (max-width: 576px) {
+    .gallery-home {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    /* .img-div{padding: 50px !important;} */
+  }
+  
+  /* Media query for very small screens below 490px */
+  @media (max-width: 490px) {
+    .gallery-home {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+      gap: 8px !important;
+      padding: 8px !important;
+    }
+    .img-div{padding: 20px  !important;}
+  }
+  
+  /* Ensure images fit within their grid cells */
+  .gallery-home img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 8px; /* Ensure images cover the grid cell without stretching */
+    opacity: 0; 
+    transform: translateY(20px);  
+    transition: opacity 0.5s, transform 0.5s;  
+}  
+  
+.gallery-home img :hover {
+  transform: scale(1.05); /* Scale up by 5% */
+}
+
+  /*  */
+ 
+  @media (max-width:575px) {
+
+    .button{font-size: 14px !important;width: 170px !important;padding: 5px !important;}
+    
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+   
+    padding: 30px;
+  }
+  
+  /* Media query for screens between 576px and 768px */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
+      padding: 12px;
+    }
+    .img-div{padding: 10px  !important;}
+  }
+  
+  /* Media query for screens below 576px */
+  @media (max-width: 576px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    .img-div{padding: 10px  !important;}
+  }
+  
+  /* Media query for very small screens below 490px */
+  @media (max-width: 490px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+      padding: 8px;
+    }
+    .img-div{padding: 10px  !important;}
+    .button_back{width: 150px !important;font-size: 12px;}
+  }
+  
+  /* Ensure images fit within their grid cells */
+  
